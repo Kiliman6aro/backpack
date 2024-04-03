@@ -203,21 +203,21 @@ var app = new Vue({
     },
     methods: {
         getRole(type){
-            let roleaName = "User";
+            let roleName = "User";
             switch(type){
                 case "a":
-                    roleaName = 'Admin'
+                    roleName = 'Admin'
                     break;
                 case "c":
-                    roleaName = "Manager"
+                    roleName = "Manager"
                     break;
                 case "b":
-                    roleaName = "User"
+                    roleName = "User"
                     break;
                 default:
                     roleName = "User";
             }
-            return roleaName;
+            return roleName;
         }
     }
 })
