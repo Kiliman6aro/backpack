@@ -49,7 +49,10 @@ fetch(baseUrl+'/include/top-sidebar.hbs')
 .then(response => response.text())
 .then(template => {
     const compiledTemplate = Handlebars.compile(template);
-    document.getElementById('hbs-top-sidebar').innerHTML = compiledTemplate({logoUrl:baseUrl+"/media/img/education-22.svg"});
+    document.getElementById('hbs-top-sidebar').innerHTML = compiledTemplate({
+      logoUrl:baseUrl+"/media/img/education-22.svg",
+      homepageUrl: baseUrl
+    });
 });
 
 fetch(baseUrl+'/include/left-sidebar.hbs')
