@@ -60,6 +60,7 @@ fetch(baseUrl+'/include/left-sidebar.hbs')
       usersListUrl:baseUrl+"/pages/users.html",
       loginUrl:"/pages/login.html",
       login2Url:"/pages/login2.html",
+      homepageUrl: baseUrl
     });
 });
 
@@ -104,4 +105,4 @@ themeToggleBtn.addEventListener('click', function() {
     }
     
 });
-}, 500)
+}, 1500)
