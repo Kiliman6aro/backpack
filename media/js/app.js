@@ -75,7 +75,7 @@ fetch(baseUrl+'/include/left-sidebar.hbs')
 });
 
 setTimeout(function(){
-  var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
 // Change the icons inside the button based on previous settings
@@ -115,4 +115,4 @@ themeToggleBtn.addEventListener('click', function() {
     }
     
 });
-}, 1500)
+}, 500)
