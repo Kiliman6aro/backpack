@@ -148,7 +148,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars/dist/handlebars.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <script src="/data/users.js"></script>
+    <script id="app-users"></script>
     <script id="app-script"></script>
     <script>
         var baseUrl;
@@ -161,6 +161,9 @@
         // Загрузка стилей
         var styleLink = document.getElementById('app-style');
         styleLink.href = baseUrl + '/media/css/app.css';
+
+        var scriptTag = document.getElementById('app-users');
+        scriptTag.src = baseUrl + '/data/users.js';
   
         // Загрузка скрипта
         var scriptTag = document.getElementById('app-script');

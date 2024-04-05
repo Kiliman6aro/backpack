@@ -77,20 +77,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
     <script id="app-script"></script>
     <script>
-      // Определение переменной, которая будет хранить базовый URL в зависимости от среды
       var baseUrl;
 
-      // Проверка среды и установка соответствующего базового URL
       if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
           baseUrl = 'http://127.0.0.1:5500';
       } else {
           baseUrl = 'https://kiliman6aro.github.io/backpack';
       }
-      // Загрузка стилей
       var styleLink = document.getElementById('app-style');
       styleLink.href = baseUrl + '/media/css/app.css';
 
-      // Загрузка скрипта
       var scriptTag = document.getElementById('app-script');
       scriptTag.src = baseUrl + '/media/js/app.js';
   </script>
