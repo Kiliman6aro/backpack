@@ -6,13 +6,6 @@
     <title>Dashboard</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link id="app-style"/>
-    <script>
-      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
-      } else {
-          document.documentElement.classList.remove('dark')
-      }
-  </script>
 </head>
 <body>
     <div class="antialiased bg-gray-50 dark:bg-gray-900">
@@ -88,7 +81,7 @@
       styleLink.href = baseUrl + '/media/css/app.css';
 
       var scriptTag = document.getElementById('app-script');
-      scriptTag.src = baseUrl + '/media/js/app.js';
+      scriptTag.src = baseUrl + '/media/js/app.js?v=1';
   </script>
 </body>
 </html>

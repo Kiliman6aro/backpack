@@ -62,6 +62,16 @@ fetch(baseUrl+'/include/left-sidebar.hbs')
       login2Url:"/pages/login2.html",
       homepageUrl: baseUrl
     });
+
+    // Добавление обработчиков событий для элементов меню
+    const dropdownButtons = document.querySelectorAll('[data-collapse-toggle]');
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('aria-controls');
+            const targetElement = document.getElementById(targetId);
+            targetElement.classList.toggle('hidden');
+        });
+    });
 });
 
 setTimeout(function(){
