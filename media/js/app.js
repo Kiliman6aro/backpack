@@ -49,14 +49,14 @@ fetch(baseUrl+'/include/top-sidebar.hbs')
 .then(response => response.text())
 .then(template => {
     const compiledTemplate = Handlebars.compile(template);
-    document.getElementById('hbs-top-sidebar').innerHTML = compiledTemplate({});
+    document.getElementById('hbs-top-sidebar').innerHTML = compiledTemplate({logoUrl:baseUrl+"/media/img/education-22.svg"});
 });
 
 fetch(baseUrl+'/include/left-sidebar.hbs')
 .then(response => response.text())
 .then(template => {
     const compiledTemplate = Handlebars.compile(template);
-    document.getElementById('hbs-left-sidebar').innerHTML = compiledTemplate({});
+    document.getElementById('hbs-left-sidebar').innerHTML = compiledTemplate({usersListUrl:baseUrl+"/pages/users.html"});
 });
 
 setTimeout(function(){
