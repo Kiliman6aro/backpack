@@ -45,6 +45,20 @@ tailwind.config = {
     }
 };
 
+fetch(baseUrl+'/include/top-sidebar.hbs')
+.then(response => response.text())
+.then(template => {
+    const compiledTemplate = Handlebars.compile(template);
+    document.getElementById('hbs-top-sidebar').innerHTML = compiledTemplate({});
+});
+
+fetch(baseUrl+'/include/left-sidebar.hbs')
+.then(response => response.text())
+.then(template => {
+    const compiledTemplate = Handlebars.compile(template);
+    document.getElementById('hbs-left-sidebar').innerHTML = compiledTemplate({});
+});
+
 setTimeout(function(){
   var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
