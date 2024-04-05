@@ -56,7 +56,11 @@ fetch(baseUrl+'/include/left-sidebar.hbs')
 .then(response => response.text())
 .then(template => {
     const compiledTemplate = Handlebars.compile(template);
-    document.getElementById('hbs-left-sidebar').innerHTML = compiledTemplate({usersListUrl:baseUrl+"/pages/users.html"});
+    document.getElementById('hbs-left-sidebar').innerHTML = compiledTemplate({
+      usersListUrl:baseUrl+"/pages/users.html",
+      loginUrl:"/pages/login.html",
+      login2Url:"/pages/login2.html",
+    });
 });
 
 setTimeout(function(){
