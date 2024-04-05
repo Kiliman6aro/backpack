@@ -58,8 +58,8 @@ fetch(baseUrl+'/include/left-sidebar.hbs')
     const compiledTemplate = Handlebars.compile(template);
     document.getElementById('hbs-left-sidebar').innerHTML = compiledTemplate({
       usersListUrl:baseUrl+"/pages/users.html",
-      loginUrl:"/pages/login.html",
-      login2Url:"/pages/login2.html",
+      loginUrl:baseUrl+"/pages/login.html",
+      login2Url:baseUrl+"/pages/login2.html",
       homepageUrl: baseUrl
     });
 
